@@ -17,7 +17,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.persistence.EntityExistsException;
 import javax.transaction.Transactional;
-import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,11 +30,10 @@ public class ItemServiceTest {
     ItemService itemService;
     @Autowired
     ItemRepository itemRepository;
-    ;
     @Autowired
     ItemImgRepository itemImgRepository;
 
-    List<MultipartFile> createMultipartFileList() throws Exception {
+    List<MultipartFile> createMultipartFileList() {
         List<MultipartFile> multipartFileList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             String path = "/home/leechis/tmp/shop/item";
